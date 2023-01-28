@@ -1,0 +1,5 @@
+.hero-image {
+    padding: 30vh 0px;
+    background-image: linear-gradient(45deg, #fff9f9e8, #f6f6f7b3),
+        url('../assets/Asset1.svg');
+}

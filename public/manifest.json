@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Resume Maker Online",
+  "name": "Resume Maker Online - Create Resume Maker Online | No Signup | 100% Free",
+  "description":"Create Resume Maker Online | No Signup | 100% Free", 
   "icons": [
     {
       "src": "favicon.ico",
