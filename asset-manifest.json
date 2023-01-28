@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/resumemaker.site/static/css/main.21874665.css",
-    "main.js": "/resumemaker.site/static/js/main.f504b118.js",
-    "static/media/Asset1.svg": "/resumemaker.site/static/media/Asset1.cc3896b97e4eb521abc3.svg",
-    "static/media/logo-h.svg": "/resumemaker.site/static/media/logo-h.6a9085e9434dcb7bc7a3cb1354c77700.svg",
-    "index.html": "/resumemaker.site/index.html",
-    "main.21874665.css.map": "/resumemaker.site/static/css/main.21874665.css.map",
-    "main.f504b118.js.map": "/resumemaker.site/static/js/main.f504b118.js.map"
+    "main.css": "/static/css/main.75d530da.css",
+    "main.js": "/static/js/main.618d6ff5.js",
+    "static/media/Asset1.svg": "/static/media/Asset1.cc3896b97e4eb521abc3.svg",
+    "static/media/logo-h.svg": "/static/media/logo-h.6a9085e9434dcb7bc7a3cb1354c77700.svg",
+    "index.html": "/index.html",
+    "main.75d530da.css.map": "/static/css/main.75d530da.css.map",
+    "main.618d6ff5.js.map": "/static/js/main.618d6ff5.js.map"
   },
   "entrypoints": [
-    "static/css/main.21874665.css",
-    "static/js/main.f504b118.js"
+    "static/css/main.75d530da.css",
+    "static/js/main.618d6ff5.js"
   ]
 }
