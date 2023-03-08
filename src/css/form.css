@@ -1,0 +1,33 @@
+label {
+    font-size: 1.2rem;
+    width:20%;
+}
+  
+.form-control, .form-group_inputs {
+    border:1px solid var(--color-black);
+    font-size: 1.2rem;
+    width:100%;
+    padding:1rem;
+    border-radius: var(--border-radius-3  );
+}
+
+
+form.column , .form-group_inputs .row , .form-group_inputs.column {
+    gap:1rem;
+}
+
+.form-group_inputs .row {
+    gap:1rem;
+}
+
+.radio-inline {
+    display: inline;
+}
+
+table {
+    border: 0.1rem solid black;
+    border-radius: var(--border-radius-3);
+    padding:1rem;
+    margin-bottom: 1rem;
+}
+

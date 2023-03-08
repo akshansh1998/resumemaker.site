@@ -1,13 +1,17 @@
-import logo from './logo.svg';
+import Home from './views/Home';
+import Header from './sections/Header';
+import Footer from './sections/Footer';
 import './App.css';
+import Form from './components/Form';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        ResumeMaker.site is Coming Soon
-      </header>
-    </div>
+    <>
+      <Header />
+      {/* <Home /> */}
+      <Form />
+      <Footer />
+    </>
   );
 }
 

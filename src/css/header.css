@@ -1,0 +1,8 @@
+header {
+    background:black;
+}
+
+header #logo {
+    max-width:10rem;
+    padding:1rem 0;
+}

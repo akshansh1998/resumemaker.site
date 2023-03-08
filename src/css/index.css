@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-hue: 20;
+  --black-lightness: 15%;
+  --dark-lightness: 44%;
+  --light-lightness: 94%;
+  --white-lightness: 100%;
+  --color-primary: hsl(var(--primary-hue), 89%, 41%);
+  --color-white: hsl(0, 5%, var(--white-lightness));
+  --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
+  --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
+  --color-dark: hsl(var(--primary-hue)), 5%, var(--dark-lightness);
+
+  /* GENERAL CONTAINER VARIABLES */
+  /* --container-width-lg: 1200px;
+  --container-width-md: 900px; */
+
+  /* BORDER RADIUS VARIABLES */
+  --border-radius-1: 1.2rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 0.5rem;
+
+  /* GENERAL TRANSITION VARIABLES */
+  --transition: all 500ms ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  font-size: 0.9rem; /* 16px * 0.9 = 14.4px */
+}
+
+/* GENERAL CONTAINER CLASS */
+.container {
+  margin-inline: auto;
+  max-width: 1200px;
+}
+
+/* GENERAL SECTION STYLES */
+
+main h1{
+  margin-bottom: 1rem;
+}
+
+section , main {
+  padding: 5rem 0;
+  background: var(--color-light);
+  transition: var(--transition);
+}
+
+section:nth-child(even) {
+  background-color: var(--color-white);
+}
+
+section > h2 {
+  text-align: center;
+}
+
+section > p {
+  text-align: center;
+  margin: 0.5rem auto 4rem;
+  width: 40%;
+}
+
+.row {
+  display: flex;
+  width:100%;
+}
+
+.align-right {
+  justify-content: end;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  gap:1rem;
+}
+
+.gap-3 {
+  gap:3rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.flex-start {
+  justify-content: start;
+}
+
+/* GENERAL LINK STYLES */
+a {
+  color: var(--color-white);
+  transition: var(--transition);
+}
+
+a.dark {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+a.dark:hover {
+  text-decoration: underline;
+}
+/* GENERAL HEADING STYLES */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  color: var(--color-dark);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 0.95rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+/* GENERAL IMAGES STYLES */
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* GENERAL BUTTON STYLES */
+.btn {
+  display: inline-block;
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  background: var(--color-light);
+  color: var(--color-black);
+  padding: 0.6rem 2rem;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: transparent;
+  border-color: var(--color-light);
+  transform: translateY(-0.2rem);
+}
+
+.btn.white {
+  background: var(--color-white);
+}
+
+.btn.white:hover {
+  background: transparent;
+  border-color: var(--color-white);
+}
+
+.btn.primary {
+  background: var(--color-primary);
+  /* Text Color white  */
+  color: white;
+}
+
+.btn.primary:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn.secondary {
+  border-color: var(--color-primary);
+}
+
+.btn.secondary:hover{
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color:var(--color-white)
+}
+
+.btn.sm {
+  padding: 0.5rem 1rem;
+}
+
+/* MEDIA QUERIES (tablets) */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section , main {
+    padding: 8rem 0;
+  }
+
+  section > p {
+    width: 72%;
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* MEDIA QUERIES (phones) */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+  }
+
+  section > p {
+    width: var(--container-width-md);
+  }
+}
