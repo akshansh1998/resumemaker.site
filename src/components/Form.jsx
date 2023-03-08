@@ -1,28 +1,30 @@
 import '../css/form.css'
 
-
 const Form = () => {
+  
+//Clone a Table Row
+const cloneRow = (row, tbody) => {
+  let trow = document.getElementById(row); // find row to copy
+  let table = document.getElementById(tbody); // find table body tag to append to
+  let clone = trow.cloneNode(true); // copy children too
+  clone.id = ' '; // change id or other attributes/contents to avoid duplicating of id's
+  clone.classList.add("cloned");
+  table.appendChild(clone) // add new row to end of table
+};
 
-  //Clone a Table Row
-  function cloneRow(row, tbody) {
-    var row = document.getElementById(row); // find row to copy
-    var table = document.getElementById(tbody); // find table body tag to append to
-    var clone = row.cloneNode(true); // copy children too
-    clone.id = ' '; // change id or other attributes/contents to avoid duplicating of id's
-    clone.classList.add("cloned");
-    table.appendChild(clone) // add new row to end of table
 
-  };
-
-  //Remove a Cloned Table Row
-  function removeRow(tableID) {
-    var table = document.getElementById(tableID);
+//Remove a Cloned Table Row
+const removeRow = (tbody) => {
+  let table = document.getElementById(tbody);    
     let last = table.lastElementChild;
-
     if (last.classList.contains("cloned")) {
       last.remove();
+    } else {
+      return;
     }
-  };
+};
+
+// formic
 
 
   return (
@@ -30,7 +32,7 @@ const Form = () => {
       <main>
         <div className="container">
           <h1>Enter Details</h1>
-          <form className='column'>
+          <form className='column' >
             <div className="form-group row">
               <label htmlFor="full-name" className="" value="John Doe">Full Name</label>
               <input defaultValue="" id="full-name" className="form-control" type="text" name="fullName" placeholder="Enter Your Name" />
@@ -130,7 +132,7 @@ const Form = () => {
                     </tr>
                   </thead>
                   <tbody id="qualiBody">
-                    <tr id='addr00' data-id="0" className="hidden">
+                    <tr id='addr00' data-id="0" className="">
                       <td data-name="degreeDeploma[]">
                         <select name="degreeDeploma[]" className="form-control">
                           <option value="Matric">Matric</option>
@@ -172,9 +174,9 @@ const Form = () => {
                   </tbody>
                 </table>
                 <div className="row align-right gap-1">
-                  <button onclick="removeRow('qualiBody')" id="add_qualification" className="btn white">x
+                  <button type='button' onClick={() => removeRow('qualiBody')} id="add_qualification" className="btn white">x
                   </button>
-                  <button onclick="cloneRow('addr00', 'qualiBody')" id="add_qualification" className="btn primary">Add More
+                  <button type='button' onClick={() => cloneRow('addr00', 'qualiBody')} id="add_qualification" className="btn primary">Add More
                   Qualifications</button>
 
                 </div>
@@ -202,7 +204,7 @@ const Form = () => {
                   </tr>
                 </thead>
                 <tbody id="expBody">
-                  <tr id='addr10' data-id="1" className="hidden">
+                  <tr id='addr10' data-id="1" className="">
                     <td data-name="yearsOfExperience[]">
                       <input defaultValue="" type="number" name='yearsOfExperience[]' placeholder='No of Years' className="form-control" />
                     </td>
@@ -218,9 +220,9 @@ const Form = () => {
 
               </table>
               <div className="row align-right gap-1">
-                <button onclick="removeRow('expBody')" id="remove_experience" className="btn white">x
+                <button type='button' onClick={() => removeRow('expBody')} id="remove_experience" className="btn white">x
                 </button>
-                <button onclick="cloneRow('addr10', 'expBody')" id="add_experience" className="btn primary">Add Experience</button>
+                <button type='button' onClick={() => cloneRow('addr10', 'expBody')} id="add_experience" className="btn primary">Add Experience</button>
 
               </div>
 
