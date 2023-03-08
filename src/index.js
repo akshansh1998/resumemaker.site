@@ -4,6 +4,7 @@ import './index.css';
 import Home from './Home';
 // import reportWebVitals from './reportWebVitals';
 import Header from './Header';
+import Footer from './Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,7 +12,7 @@ root.render(
 
     <Header />{/* Added Header  */}
     <Home />
-
+    <Footer />
   </React.StrictMode>
 );
 
